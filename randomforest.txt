@@ -1,0 +1,47 @@
+Random Forest
+
+from sklearn.ensemble import RandomForestClassifier
+tree_model = RandomForestClassifier(n_estimators=70, max_leaf_nodes=32, random_state=777)
+
+['month', 'day', 'plant', 'loc', 'temp_in', 'hum_in', 'temp_coil', 'dewpoint', 'diff', 'dew_diff', 'low_1']
+
+
+<res>
+
+훈련 세트 정확도: 1.000
+테스트 세트 정확도: 1.000
+특성 중요도:
+[0.00343042 0.00552781 0.03091667 0.03638003 0.00836775 0.13663875
+ 0.01229109 0.0162864  0.03388301 0.15363102 0.56264703]
+['month', 'day', 'plant', 'loc', 'temp_in', 'hum_in', 'temp_coil', 'dewpoint', 'diff', 'dew_diff', 'low_1']
+
+
+
+
+학습 데이터의 test셋
+
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    103030
+         1.0       0.96      0.97      0.96       608
+
+    accuracy                           1.00    103638
+   macro avg       0.98      0.99      0.98    103638
+weighted avg       1.00      1.00      1.00    103638
+
+[[103005     25]
+ [    18    590]]
+
+전체 데이터셋
+
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    343480
+         1.0       0.96      0.97      0.97      1977
+
+    accuracy                           1.00    345457
+   macro avg       0.98      0.99      0.98    345457
+weighted avg       1.00      1.00      1.00    345457
+
+[[343409     71]
+ [    56   1921]]
